@@ -1,0 +1,1211 @@
+/* ========= GOOGLE FONTS ========= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+/* Loads two fonts from the internet
+   Poppins — used for general text throughout the website
+   Playfair Display — used for headings to give an elegant look */
+
+
+/* ========= GLOBAL ========= */
+body {
+    margin: 0;
+    /* Removes the default white gap around all edges of the page */
+    font-family: 'Poppins', sans-serif;
+    /* Sets Poppins as the default font for the entire website */
+    background: #efe6dc;
+    /* Sets a warm beige background colour for all pages */
+}
+
+
+/* ========= TOP BAR ========= */
+.topbar {
+    background: #e55b2d;
+    /* Orange-red background colour */
+    color: white;
+    /* White text */
+    padding: 8px;
+    /* Space inside the bar */
+    font-size: 14px;
+    /* Small text size */
+    display: flex;
+    /* Lines up the location and phone number side by side */
+    justify-content: space-around;
+    /* Spreads them evenly across the bar */
+    position: fixed;
+    /* Keeps the bar stuck at the very top even when scrolling */
+    top: 0;
+    /* Places it at the top of the screen */
+    width: 100%;
+    /* Stretches across the full screen width */
+    z-index: 1000;
+    /* Keeps it above all other elements on the page */
+}
+
+
+/* ========= NAVBAR ========= */
+.navbar {
+    position: fixed;
+    /* Stays in place while the user scrolls */
+    top: 40px;
+    /* Sits just below the top bar */
+    width: 100%;
+    /* Full screen width */
+    display: flex;
+    /* Lines up the logo and links side by side */
+    justify-content: space-between;
+    /* Logo on the left, links on the right */
+    padding: 10px 20px;
+    /* Space inside the navbar */
+    color: white;
+    /* White text */
+    z-index: 1000;
+    /* Stays on top of other elements */
+    box-sizing: border-box;
+    /* Prevents the padding from making the navbar wider than the screen */
+}
+
+.navlinks {
+    margin-right: 30px;
+    /* Pushes the nav links slightly away from the right edge */
+}
+
+.logo {
+    font-size: 24px;
+    /* Large text for the restaurant name */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.navlinks a {
+    margin: 0 15px;
+    /* Space between each navigation link */
+    color: white;
+    /* White link text */
+    text-decoration: none;
+    /* Removes the default underline from links */
+}
+
+.navlinks a.order-now-link {
+    background: #e55b2d;
+    /* Orange background to make the ORDER NOW link stand out */
+    padding: 6px 14px;
+    /* Space inside the button */
+    border-radius: 20px;
+    /* Rounds it into a pill shape */
+}
+
+
+/* ========= HERO ========= */
+.hero {
+    height: 100vh;
+    /* Makes the banner fill the full height of the screen */
+    background: url("image/bg.jpeg") center/cover;
+    /* Sets a background image, centred and covering the full area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centres the text content in the middle of the screen */
+    text-align: center;
+    color: white;
+    /* White text */
+    position: relative;
+    /* Needed so the dark overlay below is positioned correctly */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    /* A dark transparent layer placed over the background image
+       so the white text on top is easy to read */
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    /* Lifts the text above the dark overlay so it is visible */
+}
+
+.heroContent h1 {
+    font-family: 'Playfair Display', serif;
+    /* Elegant serif font for the main heading */
+    font-size: 70px;
+    /* Very large heading */
+    font-weight: 700;
+    /* Bold */
+}
+
+.heroContent p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    /* Adds spacing between letters for a stylish look */
+}
+
+.line {
+    width: 200px;
+    height: 2px;
+    /* Thin horizontal line */
+    background: white;
+    margin: 20px auto;
+    /* Centred with space above and below */
+}
+
+
+/* ========= ABOUT PAGE ========= */
+.about-hero {
+    height: 40vh;
+    /* Banner takes up 40% of the screen height */
+    background: #7a7471;
+    /* Grey-brown background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centres the heading inside the banner */
+    color: white;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    /* Large elegant heading */
+}
+
+.about-box {
+    max-width: 700px;
+    /* Limits the width so it doesn't stretch too wide */
+    margin: -60px auto 40px auto;
+    /* Negative top margin pulls the card up to overlap the banner slightly */
+    background: #faf9f8;
+    /* Near-white background */
+    padding: 35px;
+    /* Space inside the card */
+    border-radius: 18px;
+    /* Rounded corners */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    /* Soft shadow to make the card look lifted */
+    text-align: center;
+}
+
+.about-text {
+    font-size: 19px;
+    line-height: 1.9;
+    /* Extra space between lines for easy reading */
+    color: #444;
+    /* Dark grey text */
+    margin-bottom: 35px;
+}
+
+.features {
+    display: flex;
+    gap: 15px;
+    /* Space between each feature box */
+    margin-top: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Wraps onto the next line on smaller screens */
+}
+
+.feature {
+    background: #d6e0dc;
+    /* Soft green-grey background */
+    padding: 14px 22px;
+    border-radius: 12px;
+    /* Rounded corners */
+    font-size: 16px;
+    font-weight: 600;
+    color: #2f4f46;
+    /* Dark green text */
+    text-align: center;
+    flex: 1;
+    /* Each box grows equally to fill the available space */
+    min-width: 120px;
+    /* Prevents boxes from becoming too narrow */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    /* Very subtle shadow */
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+    /* Space above the button */
+}
+
+.green-btn {
+    display: inline-block;
+    text-decoration: none;
+    /* Removes underline */
+    padding: 10px 20px;
+    background: #1f7a4d;
+    /* Dark green background */
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    /* Slightly rounded corners */
+    transition: 0.3s;
+    /* Smooth hover animation */
+}
+
+.green-btn:hover {
+    transform: translateY(-2px);
+    /* Lifts the button slightly when hovered */
+    box-shadow: 0 8px 20px rgba(31,122,77,0.3);
+    /* Green tinted shadow on hover */
+}
+
+
+/* ========= MENU PAGE ========= */
+.menuWrapper {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the Lunch and Dinner sections vertically */
+    align-items: center;
+    /* Centres everything horizontally */
+    margin-top: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #1f4d3a;
+    /* Dark green colour */
+    font-size: 50px;
+    /* Large section heading */
+    margin: 0 0 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.menuWrapper > div:nth-child(2) h2 {
+    margin-top: 90px;
+    /* Adds extra space above the Dinner Menu heading to separate it from Lunch */
+}
+
+.menuCard {
+    background: #f4f4f4;
+    /* Light grey background */
+    width: 760px;
+    /* Fixed width for the card */
+    padding: 55px 70px;
+    /* Space inside the card */
+    border-radius: 22px;
+    /* Rounded corners */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    /* Shadow to lift the card off the page */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* Image and name on the left, price on the right */
+    align-items: center;
+    /* Vertically centres all items in the row */
+    padding: 22px 0;
+    /* Space above and below each row */
+    border-bottom: 1px dotted #bfbfbf;
+    /* Dotted divider line between items */
+}
+
+.row:last-child {
+    border-bottom: none;
+    /* Removes the divider line after the last item */
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    /* Lines up the food image and text side by side */
+}
+
+.left img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    /* Makes the image circular */
+    margin-right: 16px;
+    /* Space between the image and the text */
+}
+
+.left span {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the item name above the description */
+    font-size: 20px;
+    font-weight: 500;
+    color: #222;
+}
+
+.desc {
+    font-size: 15px;
+    /* Smaller than the item name */
+    color: #6b6b6b;
+    /* Grey colour */
+    margin-top: 6px;
+}
+
+.row span:last-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    /* Styles the price shown on the right side */
+}
+
+
+/* ========= MENU BUTTONS ========= */
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    /* Centres the buttons horizontally */
+    gap: 40px;
+    /* Space between buttons */
+    margin: 40px 0 60px;
+}
+
+.btn {
+    text-decoration: none;
+    /* Removes underline */
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #f64b17, #c20303);
+    /* Red gradient background */
+    border-radius: 40px;
+    /* Pill shaped button */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    /* Shadow below the button */
+    transition: 0.3s ease;
+    /* Smooth hover animation */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    /* Lifts the button on hover */
+    box-shadow: 0 14px 28px rgba(0,0,0,0.35);
+    /* Stronger shadow on hover */
+}
+
+
+/* ========= BOOKING PAGE ========= */
+.booking-body {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("image/bg3.jpeg") center/cover no-repeat;
+    /* Dark overlay on top of a background image */
+    min-height: 100vh;
+    /* At least full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centres the booking card horizontally */
+    padding-top: 40px;
+}
+
+.booking-card {
+    background: #6B4F3A;
+    /* Warm brown background */
+    padding: 55px 45px;
+    border-radius: 20px;
+    /* Rounded corners */
+    width: 360px;
+    /* Fixed width */
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    /* Strong shadow for floating effect */
+    text-align: center;
+    margin: auto;
+    /* Centres the card */
+}
+
+.booking-card h2 {
+    font-size: 30px;
+    color: #E6D2A8;
+    /* Warm golden/cream colour */
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.booking-card input,
+.booking-card select,
+.booking-card textarea {
+    width: 100%;
+    /* Full width input fields */
+    padding: 13px;
+    font-size: 15px;
+    margin-bottom: 23px;
+    /* Space below each field */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    /* Light grey border */
+    transform: translateX(-14px);
+    /* Slight left shift for alignment */
+}
+
+.booking-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 30px;
+    /* Pill shaped button */
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: #1f7a4d;
+    /* Dark green background */
+    cursor: pointer;
+    /* Shows hand cursor on hover */
+    transition: 0.3s;
+}
+
+.booking-card button:hover {
+    transform: translateY(-2px);
+    /* Lifts the button on hover */
+}
+
+.back-home {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.back-home a {
+    text-decoration: none;
+    color: #E6D2A8;
+    /* Warm cream colour */
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.back-home a:hover {
+    color: white;
+    /* Changes to white on hover */
+}
+
+
+/* ========= CONFIRM PAGE ========= */
+.confirm-body {
+    height: 100vh;
+    /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centres the card on screen */
+    background: linear-gradient(135deg, #e6f4ea, #d4efe1);
+    /* Soft green gradient background */
+    font-family: Georgia, serif;
+}
+
+.confirm-box {
+    background: white;
+    padding: 50px 60px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    animation: pop 0.6s ease;
+    /* Plays a pop animation when the card appears */
+    max-width: 420px;
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    /* Starts small and invisible */
+    to   { transform: scale(1);   opacity: 1; }
+    /* Ends at full size and fully visible */
+}
+
+.icon {
+    font-size: 60px;
+    /* Large tick emoji */
+    margin-bottom: 15px;
+}
+
+.confirm-box h1 {
+    margin: 10px 0;
+    color: #1f4d3a;
+    /* Dark green */
+    font-size: 34px;
+}
+
+.confirm-box p {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.confirm-box a {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #1f4d3a, #2f7b5b);
+    /* Dark to lighter green gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    /* Pill shaped button */
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.confirm-box a:hover {
+    transform: translateY(-3px);
+    /* Lifts on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+/* ========= CONTACT PAGE ========= */
+.contact-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centres the contact card on screen */
+    background: linear-gradient(120deg, #d9a7c7, #fffcdc);
+    /* Purple to yellow gradient background */
+}
+
+.contact-card {
+    display: flex;
+    /* Left and right sections sit side by side */
+    width: 720px;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Hides anything outside the rounded corners */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    background: white;
+}
+
+.contact-left {
+    width: 45%;
+    background: linear-gradient(135deg, #8a4b08, #c47a3a);
+    /* Brown gradient */
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically centres the text */
+}
+
+.contact-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact-left p {
+    line-height: 1.6;
+    /* Comfortable line spacing */
+}
+
+.contact-right {
+    width: 55%;
+    padding: 35px 40px;
+    background: #f3efec;
+    /* Warm off-white background */
+}
+
+.contact-right h3 {
+    margin-top: 15px;
+    color: #333;
+}
+
+.contact-right p {
+    margin: 5px 0 10px;
+    color: #444;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 24px;
+    background: #8a4b08;
+    /* Dark brown background */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    /* Pill shaped */
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #6d3a05;
+    /* Darker brown on hover */
+}
+
+
+/* ========= ORDER PAGE ========= */
+.order-page {
+    padding-top: 100px;
+    /* Pushes content below the fixed navbar */
+    background: #efe6dc;
+    /* Warm beige background */
+    min-height: 100vh;
+}
+
+.order-hero {
+    background: linear-gradient(135deg, #8a4b08, #c47a3a);
+    /* Brown gradient banner */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.order-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 0 0 8px 0;
+}
+
+.order-hero p {
+    font-size: 15px;
+    opacity: 0.85;
+    /* Slightly transparent */
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.order-layout {
+    display: flex;
+    /* Menu panel on the left, cart panel on the right */
+    gap: 24px;
+    /* Space between the two panels */
+    max-width: 1100px;
+    margin: 30px auto;
+    /* Centred on the page */
+    padding: 0 20px 40px;
+    align-items: flex-start;
+    /* Both panels start from the top */
+}
+
+.menu-panel {
+    flex: 1;
+    /* Takes up all remaining space after the cart panel */
+}
+
+.menu-panel h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #5a2e00;
+    margin: 0 0 14px 0;
+    border-bottom: 2px solid #c47a3a;
+    /* Brown underline below the heading */
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+.category-tabs {
+    display: flex;
+    gap: 10px;
+    /* Space between tab buttons */
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 8px 20px;
+    border: 2px solid #c47a3a;
+    background: transparent;
+    color: #8a4b08;
+    border-radius: 25px;
+    /* Pill shaped tab button */
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: #c47a3a;
+    color: white;
+    /* Active or hovered tab gets a filled brown background */
+}
+
+.item-card {
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    /* Image, info and button sit in a row */
+    gap: 14px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    /* Space between each item card */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-2px);
+    /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.item-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* Circular food image */
+    object-fit: cover;
+    /* Crops the image neatly to fit the circle */
+    flex-shrink: 0;
+    /* Prevents the image from shrinking */
+    background: #e8d5c0;
+}
+
+.item-img-placeholder {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e8d5c0, #c47a3a44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centres the emoji inside the circle */
+    font-size: 28px;
+    flex-shrink: 0;
+    /* Shows when the food image fails to load */
+}
+
+.item-info { flex: 1; }
+/* Takes up all available space between the image and the button */
+
+.item-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2c1a00;
+    /* Dark brown text */
+    margin-bottom: 3px;
+}
+
+.item-desc {
+    font-size: 12px;
+    color: #888;
+    /* Grey description text */
+    line-height: 1.4;
+}
+
+.item-price {
+    font-weight: 600;
+    font-size: 15px;
+    color: #8a4b08;
+    /* Brown price text */
+    margin-top: 4px;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    /* Holds the Add button or quantity controls */
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* Circular button */
+    border: none;
+    background: #c47a3a;
+    /* Brown background */
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.qty-btn:hover { background: #8a4b08; }
+/* Darkens on hover */
+
+.qty-display {
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 18px;
+    text-align: center;
+    color: #2c1a00;
+    /* Shows the current quantity number between the + and - buttons */
+}
+
+.add-btn {
+    padding: 8px 18px;
+    background: #e55b2d;
+    /* Orange-red background */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    /* Pill shaped */
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-btn:hover { background: #c74420; }
+/* Darkens on hover */
+
+
+/* ========= CART PANEL ========= */
+.cart-panel {
+    width: 320px;
+    flex-shrink: 0;
+    /* Keeps the cart panel at a fixed width */
+    position: sticky;
+    top: 110px;
+    /* Sticks to this position as the user scrolls down */
+}
+
+.cart-box {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    overflow: hidden;
+    /* Clips content inside the rounded corners */
+}
+
+.cart-header {
+    background: linear-gradient(135deg, #8a4b08, #c47a3a);
+    /* Brown gradient header */
+    color: white;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Cart title on the left, item count badge on the right */
+}
+
+.cart-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.cart-count-badge {
+    background: #e55b2d;
+    /* Orange-red circle badge */
+    color: white;
+    border-radius: 50%;
+    /* Circular badge */
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    /* Shows the total number of items in the cart */
+}
+
+.cart-items-list {
+    padding: 14px 18px;
+    max-height: 280px;
+    /* Limits the height — scrolls if there are many items */
+    overflow-y: auto;
+    /* Adds a vertical scrollbar when needed */
+}
+
+.cart-items-list::-webkit-scrollbar { width: 5px; }
+/* Thin scrollbar */
+.cart-items-list::-webkit-scrollbar-track { background: #f5f0eb; }
+/* Light background behind the scrollbar */
+.cart-items-list::-webkit-scrollbar-thumb { background: #c47a3a; border-radius: 3px; }
+/* Brown scrollbar handle */
+
+.cart-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Name, quantity, price and remove button spread across the row */
+    padding: 8px 0;
+    border-bottom: 1px solid #f0ebe6;
+    /* Light divider between cart items */
+    font-size: 13px;
+}
+
+.cart-item-row:last-child { border-bottom: none; }
+/* No divider after the last item */
+
+.cart-item-name {
+    font-weight: 500;
+    color: #2c1a00;
+    flex: 1;
+    /* Takes up remaining space */
+}
+
+.cart-item-qty {
+    color: #888;
+    /* Grey quantity text */
+    margin: 0 10px;
+}
+
+.cart-item-price {
+    font-weight: 600;
+    color: #8a4b08;
+    /* Brown price text */
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #cc3333;
+    /* Red X button */
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 4px;
+}
+
+.cart-empty-msg {
+    text-align: center;
+    color: #aaa;
+    /* Grey message text */
+    padding: 30px 20px;
+    font-size: 13px;
+    /* Shown when no items are in the cart */
+}
+
+.cart-summary {
+    background: #faf7f4;
+    /* Warm off-white background */
+    padding: 14px 18px;
+    border-top: 1px solid #ede5dc;
+    /* Divider above the summary section */
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    /* Label on the left, value on the right */
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c1a00;
+    border-top: 2px solid #c47a3a;
+    /* Brown line above the total */
+    padding-top: 10px;
+    margin-top: 6px;
+}
+
+.checkout-section {
+    padding: 0 18px 18px;
+    background: white;
+    /* Contains the name, phone and payment fields */
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8a4b08;
+    margin: 14px 0 8px;
+    text-transform: uppercase;
+    /* Makes the label text all capitals */
+    letter-spacing: 0.5px;
+}
+
+.checkout-input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #ddd;
+    /* Light grey border */
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #333;
+    box-sizing: border-box;
+    /* Prevents the input from overflowing its container */
+    margin-bottom: 8px;
+    transition: border-color 0.2s;
+}
+
+.checkout-input:focus {
+    outline: none;
+    border-color: #c47a3a;
+    /* Brown border when the user clicks on the input field */
+}
+
+.payment-options {
+    display: flex;
+    gap: 8px;
+    /* Space between payment buttons */
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.pay-option {
+    flex: 1;
+    min-width: 70px;
+    padding: 9px 6px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.pay-option.selected {
+    border-color: #c47a3a;
+    background: #fdf3ea;
+    color: #8a4b08;
+    /* Highlighted style for the selected payment method */
+}
+
+.place-order-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #e55b2d, #c43a10);
+    /* Orange to red gradient */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    margin-top: 4px;
+}
+
+.place-order-btn:hover {
+    opacity: 0.92;
+    /* Slightly fades on hover */
+    transform: translateY(-1px);
+    /* Lifts slightly on hover */
+}
+
+.order-back-bar {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Centred on the page */
+    padding: 0 20px 30px;
+}
+
+.order-back-bar a {
+    color: #8a4b08;
+    /* Brown link colour */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px;
+    /* Space between the two back links */
+}
+
+.order-back-bar a:hover { text-decoration: underline; }
+
+
+/* ========= SUCCESS OVERLAY ========= */
+.success-overlay {
+    display: none;
+    /* Hidden by default — shown after order is placed */
+    position: fixed;
+    inset: 0;
+    /* Covers the entire screen */
+    background: rgba(0,0,0,0.55);
+    /* Semi-transparent dark background behind the popup */
+    z-index: 9999;
+    /* On top of everything else on the page */
+    justify-content: center;
+    align-items: center;
+    /* Centres the popup card on screen */
+}
+
+.success-overlay.show { display: flex; }
+/* JavaScript adds the class "show" to make the overlay visible after order is placed */
+
+.success-card {
+    background: white;
+    border-radius: 22px;
+    padding: 44px 40px;
+    text-align: center;
+    max-width: 380px;
+    width: 90%;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+    animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    /* Plays a bouncy pop animation when it appears */
+}
+
+@keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    /* Starts small and invisible */
+    to   { transform: scale(1);   opacity: 1; }
+    /* Ends at full size and fully visible */
+}
+
+.success-icon { font-size: 60px; margin-bottom: 12px; }
+/* Large tick emoji at the top of the popup */
+
+.success-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #2c6e49;
+    /* Dark green heading */
+    margin: 0 0 10px;
+}
+
+.success-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 24px;
+}
+
+.success-order-id {
+    background: #f0faf5;
+    /* Light green background */
+    border: 1.5px solid #a8d5bb;
+    /* Green border */
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 13px;
+    color: #2c6e49;
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: inline-block;
+    /* Shows the generated order ID number */
+}
+
+.success-home-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #8a4b08, #c47a3a);
+    /* Brown gradient button */
+    color: white;
+    border-radius: 25px;
+    /* Pill shaped */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.success-home-btn:hover { opacity: 0.88; }
+/* Slightly fades on hover */
+
+
+/* ========= VISIBILITY HELPERS ========= */
+.cart-summary        { display: none; }
+/* Cart summary is hidden by default */
+
+.cart-summary-visible { display: block; }
+/* JavaScript adds this class to show the summary when items are in the cart */
+
+.checkout-section    { display: none; }
+/* Checkout form is hidden by default */
+
+.checkout-visible    { display: block; }
+/* JavaScript adds this class to show the checkout form when items are in the cart */

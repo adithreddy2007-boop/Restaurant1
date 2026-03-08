@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Online – Pasha Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="order-page">
+
+<!-- HERO -->
+<div class="order-hero">
+    <h1>Order Online</h1>
+    <p>Add your favourites • Takeaway ready in 20–30 mins</p>
+</div>
+
+<!-- LAYOUT -->
+<div class="order-layout">
+
+    <!-- LEFT: MENU PANEL -->
+    <div class="menu-panel">
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="filterCategory('all', this)">All Items</button>
+            <button class="tab-btn" onclick="filterCategory('lunch', this)">Lunch</button>
+            <button class="tab-btn" onclick="filterCategory('dinner', this)">Dinner</button>
+        </div>
+        <h2 id="menu-heading">All Items</h2>
+        <div id="menu-items-container"></div>
+    </div>
+
+    <!-- RIGHT: CART PANEL -->
+    <div class="cart-panel">
+        <div class="cart-box">
+
+            <div class="cart-header">
+                <h3>🛒 Your Cart</h3>
+                <span class="cart-count-badge" id="cart-count">0</span>
+            </div>
+
+            <div class="cart-items-list" id="cart-items-list">
+                <div class="cart-empty-msg">Your cart is empty.<br>Add items from the menu!</div>
+            </div>
+
+            <div class="cart-summary" id="cart-summary">
+                <div class="summary-row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+                <div class="summary-row"><span>Packaging</span><span>₹10</span></div>
+                <div class="summary-total"><span>Total</span><span id="total">₹0</span></div>
+            </div>
+
+            <div class="checkout-section" id="checkout-section">
+                <div class="section-label">Your Details</div>
+                <input type="text" class="checkout-input" id="cust-name" placeholder="Your Name">
+                <input type="tel" class="checkout-input" id="cust-phone" placeholder="Phone Number (10 digits)" maxlength="10">
+
+                <div class="section-label">Payment Method</div>
+                <div class="payment-options">
+                    <button class="pay-option selected" onclick="selectPay(this,'Cash on Pickup')">💵 Cash</button>
+                    <button class="pay-option" onclick="selectPay(this,'UPI')">📱 UPI</button>
+                    <button class="pay-option" onclick="selectPay(this,'Card')">💳 Card</button>
+                </div>
+
+                <button class="place-order-btn" onclick="placeOrder()">Place Order →</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- BACK LINKS -->
+<div class="order-back-bar">
+    <a href="menu.html">← Back to Menu</a>
+    <a href="index.html">🏠 Home</a>
+</div>
+
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="success-overlay">
+    <div class="success-card">
+        <div class="success-icon">✅</div>
+        <h2>Order Placed!</h2>
+        <p>Your takeaway order has been confirmed.<br>Please arrive in <strong>25–30 minutes</strong>.</p>
+        <div class="success-order-id" id="order-id-display">Order #0000</div>
+        <br>
+        <a href="index.html" class="success-home-btn">← Back to Home</a>
+    </div>
+</div>
+
+<!-- JavaScript linked as separate file -->
+<script src="script.js"></script>
+
+</body>
+</html>

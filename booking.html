@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking – Pasha Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="booking-body">
+
+<div class="booking-card">
+    <h2>Reserve Your Table</h2>
+    <form action="confirm.html">
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone Number"
+               pattern="[0-9]{10}" maxlength="10" required>
+        <input type="number" placeholder="Guests" min="1" required>
+        <input type="date" required>
+        <input type="time" required>
+        <button type="submit" class="confirm-btn">Confirm Booking</button>
+        <p class="back-home">
+            <a href="index.html">← Back to Home</a>
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
